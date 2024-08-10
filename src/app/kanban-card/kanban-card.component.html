@@ -1,0 +1,11 @@
+<div class="card" [attr.id]="card.id" draggable="true" (dragstart)="onDragStart($event)" (dragend)="onDragEnd($event)">
+  <div class="type" [ngStyle]="{'background': card.bgColor}">
+    <span class="type-text">{{ card.type }}</span>
+  </div>
+  <h3>{{ card.title }}</h3>
+  <p>{{ card.content }}</p>
+  <div class="user-prio-wrapper">
+    <span class="user">{{ card.date }}</span>
+    <img class="icon" src="https://www.svgrepo.com/show/469842/sort-descending.svg" alt="Sort Icon">
+  </div>
+</div>

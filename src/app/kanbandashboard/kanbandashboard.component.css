@@ -1,0 +1,93 @@
+/* Overall Kanban Board Styling */
+.kanban-board {
+  display: flex;
+  flex-direction: row; /* Align columns horizontally */
+  padding: 20px;
+  gap: 20px; /* Space between columns */
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+/* Column Styling */
+.kanban-column {
+  flex: 0 0 auto; /* Ensure columns don't grow or shrink, keeping fixed width */
+  min-width: 300px;
+  background: #f4f5f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+.kanban-column h2 {
+  font-size: 1.5em;
+  color: #333;
+  border-bottom: 2px solid #e2e2e2;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* Cards Wrapper Styling */
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Card Styling */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: background 0.3s;
+}
+
+.card:hover {
+  background: #f9f9f9;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  margin: 0 0 10px;
+}
+
+.card p {
+  margin: 0 0 10px;
+  color: #555;
+}
+
+.card span {
+  display: block;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Drag-and-Drop Handling */
+.kanban-column {
+  position: relative;
+}
+
+.kanban-column.dragging-over {
+  background: #e9ecef;
+  border: 2px dashed #007bff;
+}
+
+.card.dragging {
+  opacity: 0.7;
+}
+
+/* Specific Column Colors */
+#todo {
+  background: #e0f7fa;
+}
+
+#in-progress {
+  background: #ffe0b2;
+}
+
+#done {
+  background: #c8e6c9;
+}

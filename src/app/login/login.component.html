@@ -1,0 +1,234 @@
+<!-- Fonts and Designs-->
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- Login Body -->
+
+<div
+  class="LoginForm"
+  style="width: 1880px; height: 900px; position: relative; background: white"
+>
+  <img
+    class="Background"
+    style="
+      width: 1920px;
+      height: 993px;
+      left: -20px;
+      top: -18px;
+      position: absolute;
+      box-shadow: 21.600000381469727px 21.600000381469727px 21.600000381469727px;
+      filter: blur(21.6px);
+    "
+    src="../../assets/images/bg.png"
+  />
+
+
+  <!------------------------------------------------------------------------------------------------->
+
+
+  <div
+    class="FormBox"
+    style="
+      width: 742.4px;
+      height: 355.83px;
+      left: 500px;
+      top: 325px;
+      position: absolute;
+    "
+  >
+  <form
+  class="Form"
+  style="
+    width: 348.74px;
+    height: 355.83px;
+    left: 258.79px;
+    top: 0px;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 20px; /* Added padding for better layout */
+  "
+  (ngSubmit)="onSubmit()"
+>
+
+    
+    <div
+      class="Chatmeyt"
+      style="
+        width: 272.38px;
+        height: 48.81px;
+        left: 40px;
+        top: 33px;
+        position: absolute;
+        text-align: center;
+        color: black;
+        font-size: 43px;
+        font-family: 'Lily Script One', cursive;
+        font-weight: 400;
+        word-wrap: break-word;
+      "
+    >
+      Kanban
+    </div>
+
+    <!-- Email Section -->
+
+    <input
+    type="email"
+        id="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email"
+    style="
+      width: 264.51px;
+      height: 39.36px;
+      left: 45px;
+      top: 111.79px;
+      position: absolute;
+      background: white;
+      border-radius: 5px;
+      border: none;
+      padding: 0 10px;
+      text-align: left;
+      color: rgba(0, 0, 0, 0.9);
+      font-size: 13px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      outline: none;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Merged box-shadow style */
+    "
+    required
+  />
+  
+
+    <!-- Password Section -->
+
+    <input
+    type="password"
+    id="password"
+    [(ngModel)]="password"
+    placeholder="Password"
+    name="password"
+  style="
+    width: 264.51px;
+    height: 38.57px;
+    left: 45px;
+    top: 168.47px;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0 10px;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Merged box-shadow style */
+  "
+  required
+/>
+
+
+    <!-- Login Button -->
+
+    <button
+      style="
+        width: 264.51px;
+        height: 33.85px;
+        left: 45px;
+        top: 251.91px;
+        position: absolute;
+        background: #10470f;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer; 
+        padding: 0; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+      "
+      type="submit"
+    >
+      <span
+        style="
+          color: white;
+          font-size: 20px;
+          font-family: Inter;
+          font-weight: 700;
+          word-wrap: break-word;
+        "
+      >
+        Log in
+      </span>
+    </button>
+
+    <!-- Error message -->
+
+    <div
+    *ngIf="showError"
+    class="error-message"
+    style="color: red; margin-top: 200px; text-align: center;"
+  >
+    Invalid email or password.
+  </div>
+  </form>
+
+    <!-- Create Account Section -->
+
+    <div
+  class="CreateAccount"
+  style="
+    width: 159.02px;
+    height: 7.87px;
+    left: 359.11px;
+    top: 299.15px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 700;
+    text-decoration: underline;
+    word-wrap: break-word;
+    transition: color 0.3s; /* Smooth color transition */
+  "
+  onmouseover="this.style.color='blue'"
+  onmouseout="this.style.color='black'"
+  (click)="navigateToRegister()">
+
+  Create account
+</div>
+
+
+    <!-- Version Section -->
+
+    <div
+      class="V001"
+      style="
+        width: 48px;
+        height: 6px;
+        left: 401px;
+        top: 340px;
+        position: absolute;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.2);
+        font-size: 9px;
+        font-family: Inter;
+        font-weight: 700;
+        word-wrap: break-word;
+      "
+    >
+      v 0.0.1
+    </div>
+  </div>
+</div>
